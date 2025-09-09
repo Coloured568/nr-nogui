@@ -15,13 +15,10 @@ namespace Insomia
 
         public override void OnUpdate()
         {
-            // Initialize canvas cache once
             if (canvases == null || canvases.Length == 0)
             {
                 canvases = UnityEngine.Object.FindObjectsOfType<Canvas>();
             }
-
-            // Toggle on key down (not every frame the key is held)
             if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
                 guiDisabled = !guiDisabled;
@@ -41,3 +38,4 @@ namespace Insomia
         }
     }
 }
+
